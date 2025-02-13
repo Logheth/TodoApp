@@ -40,11 +40,13 @@ function FinalLayout() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-
+      
+      {/* MAIN CONTENT CONTAINER */}
       <div className="flex flex-1 overflow-hidden">
         <LeftSidebar />
 
-        <div className="w-full mx-[200px]">
+        {/* MAIN CENTER CONTENT */}
+        <div className="w-full px-[100px]">
           <main className="flex-1 ml-60 mr-60 p-7 overflow-y-auto bg-white h-full mt-[70px]">
             <h2 className="text-3xl text-center font-semibold mb-7">
               To-Do List
@@ -105,6 +107,7 @@ function FinalLayout() {
           </main>
         </div>
 
+        {/* RIGHT SIDEBAR (DELETED ITEMS) */}
         {deletedTask.length > 0 && (
           <aside className="w-60 bg-gray-200 p-4 fixed   h-full right-0 border-l-2 border-gray-300 mt-[70px]">
             <h2 className="text-2xl mt-10 mb-4 font-semibold text-center rounded-md">
@@ -124,6 +127,7 @@ function FinalLayout() {
           </aside>
         )}
       </div>
+      
       <footer className="text-xl mt-auto w-full bg-gray-400 h-[70px] text-white flex items-center justify-center">
         Footer Content
       </footer>
